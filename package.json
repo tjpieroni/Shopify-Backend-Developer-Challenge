@@ -1,0 +1,22 @@
+{
+  "name": "shopify-challenge",
+  "version": "1.0.0",
+  "description": "Backend Developer Application Challenge by Thomas Pieroni",
+  "main": "backend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "inventory",
+    "manager",
+    "web",
+    "app",
+    "challenge"
+  ],
+  "author": "Thomas Pieroni",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nedb": "^1.8.0"
+  }
+}

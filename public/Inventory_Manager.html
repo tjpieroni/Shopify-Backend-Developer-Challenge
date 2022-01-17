@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <!--Head of HTML file that imports the backend Javascript file-->
+    <head>
+        <title>Inventory Management System</title>
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 80%;
+            }
+            
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+
+            .maindiv {
+                float: left;
+                
+                padding: 0 10px;
+            }
+
+            #forms {
+            content: "";
+            display: table;
+            clear: both;
+            }
+
+
+            </style>
+        <script src="Inventory_Manager.js"></script>
+    </head>
+
+    <body onload="init();">
+        <h1>Inventory Management</h1>
+        <h3>Items</h3>
+        <div id="TableDiv">
+            <table id="ItemTable">
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Category</th>
+                    <th>Id</th>
+                </tr>
+
+            </table><br><br>
+        </div>
+        <main id="forms">
+            <div id="CreateDiv" class="maindiv">
+                <h2>Create Item</h2>
+                <form id="NewItemForm">
+                    <label for="name">Name: </label><br>
+                    <input type="text" name="name" id="name"><br><br>
+                    <label for="price">Price: </label><br>
+                    <input type="text" name="price" id="price"><br><br>
+                    <label for="quantity">Quantity: </label><br>
+                    <input type="text" name="quantity" id="quantity"><br><br>
+                    <label for="category">Category: </label><br>
+                    <input type="text" name="category" id="category" list="Categories1"><br><br>
+                        <datalist id="Categories1" class="Categories">
+                            <option value="Unassigned">
+                        </datalist>
+                    <input type="submit">
+                </form>
+            </div>
+
+            <div id="EditDiv" class="maindiv">
+                <h2>Edit Item</h2>
+                <form id="EditItemForm">
+                    <label for="id">Id of Item to change: </label><br>
+                    <input type="text" name="id" id="id"><br><br>
+                    <label for="name">New Name: </label><br>
+                    <input type="text" name="name" id="name"><br><br>
+                    <label for="price">New Price: </label><br>
+                    <input type="text" name="price" id="price"><br><br>
+                    <label for="quantity">New Quantity: </label><br>
+                    <input type="text" name="quantity" id="quantity"><br><br>
+                    <label for="category">New Category: </label><br>
+                    <input type="text" name="category" id="category" list="Categories2"><br><br>
+                    <datalist id="Categories2" class="Categories">
+                        <option value="Unassigned">
+                    </datalist>
+                    <input type="submit">
+                </form>
+            </div>
+
+            <div>
+                <h2>Delete Item</h2>
+                <form id="DeleteItemForm" class="maindiv">
+                    <label for="id3">Id of Item to Delete:</label><br>
+                    <input type="text" name="id" id="id3"><br><br>
+                    <input type="submit" value="Delete">
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
